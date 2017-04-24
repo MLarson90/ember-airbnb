@@ -1,10 +1,17 @@
 <div class= "container">
   <header class= "jumbotron">
     <h1>Super Rentals</h1>
-  </header>
+      {{#each modela as |announcement|}}
+        {{announcement-tile announcement=announcement}}
+      {{/each}}
+
+
+    </header>
     {{outlet}}
   <hr>
   <footer>
-    {{#link-to 'contact'}}Our representatives would love to help!{{/link-to}}
+    <p>{{#link-to 'index'}}Home{{/link-to}}</p>
+    <p>{{#link-to 'about'}}About{{/link-to}}</p>
+    <p>{{#link-to 'contact'}}Contact Us{{/link-to}}</p>
   </footer>
 </div>

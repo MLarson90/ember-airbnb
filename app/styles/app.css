@@ -6,3 +6,12 @@ img {
 footer {
   margin-bottom: 60px;
 }
+
+.announcement {
+  width: 300px;
+  /*content: " x";*/
+  backgound: red;
+}
+li{
+  list-style: none;
+}
