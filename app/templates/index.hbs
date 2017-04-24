@@ -2,11 +2,16 @@
 
 <p>We hope you find exactly what you're looking for in a place to stay.</p>
 <ul>
-  {{#each model as |rental|}}
+  {{#each model.rental as |rental|}}
     {{rental-tile rental=rental destroyRental="destroyRental"}}
   {{/each}}
 </ul>
+<ul>
+  {{#each model.announcement as |announcement|}}
+    <li>{{announcement.title}}: {{announcement.message}}</li>
 
+  {{/each}}
+</ul>
 
     {{new-announcement saveAnnouncement="saveAnnouncement"}}
     {{new-rental saveRental2="saveRental3"}}
